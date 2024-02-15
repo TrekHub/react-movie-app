@@ -6,6 +6,7 @@ import Home from './components/home/Home';
 import {Routes, Route} from 'react-router-dom';
 
 import React, { useEffect, useState } from 'react';
+import Header from './components/header/Header';
 
 function App() {
 
@@ -32,9 +33,11 @@ function App() {
   return (
     <div className="App">
 
+      <Header />
+
       <Routes>
       <Route path="/" element={<Layout />}>
-            <Route path="/" element={<Home />} ></Route>
+            <Route path="/" element={<Home movies={movies} />} ></Route>
         </Route>
       </Routes>
 
